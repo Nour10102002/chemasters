@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="Log.css">
+  <title>Login</title>
+</head>
+<body class="backgroundpic">
+  <div class="container">
+    <div class="midtext"><h1><strong>Login</strong></h1></div>
+     <div>
+       <form>
+         <label for="username"><h2>Username</h2></label>
+         <p>
+         <input type="text" id="username" name="username" placeholder="Enter Your Username" required>
+         </p>
+         <p>
+           <label for="password"><h2>Password</h2></label>
+           <p>
+         <input type="password" id="myInput" name="password" placeholder="Enter Your Password" required>
+         <i class="bi bi-eye-slash" id="togglePassword"></i>
+         </p>
+         </p>
+         <p>
+        <input type="submit" value="Login">
+        </p>
+            <p><strong>New To Our Website? Sign Up Now!</strong></p>
+            <a href="Facebook.com" class="fa fa-facebook"></a>
+            <a href="Twitter.com" class="fa fa-twitter"></a>
+            &nbsp;
+            <a href="#">Sign Up</a> 
+            <script>
+                var input = document.getElementById("myInput");
+                var text = document.getElementById("text");
+                input.addEventListener("keyup", function(event) {
+                
+                if (event.getModifierState("CapsLock")) {
+                    text.style.display = "block";
+                  } else {
+                    text.style.display = "none"
+                  }
+                });
+                </script>
+</body>
+</html>
