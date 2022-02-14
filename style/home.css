@@ -1,0 +1,9 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    background-image: url("../nour_photo/background-page.png");
+    background-size: cover;
+}

@@ -1,0 +1,210 @@
+* {
+    font-family: sans-serif;
+}
+
+:root {
+    --mainWidth: 1000px;
+    --darkBlue: #031625;
+    --purple: #d463d4;
+}
+
+.container {
+    /* background-color: hotpink; */
+    width: var(--mainWidth);
+    height: 50vh;
+    position: relative;
+    left: 50%;
+    transform: translateX(-50%);
+    z-index: 1;
+}
+
+nav {
+    width: 100%;
+    height: 80px;
+    z-index: 11;
+    box-shadow: 0px 5px 15px rgba(0,0,0,0.5);
+    overflow: hidden;
+    color: black;
+    position: fixed;
+
+}
+
+nav::before {
+    content: '';
+    position: absolute;
+    top: -20px;
+    bottom: -20px;
+    right: -20px;
+    left: -20px;
+    backdrop-filter: blur(10px);
+}
+
+nav > ul {
+    width: var(--mainWidth);
+    position: relative;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+    display: flex;
+}
+
+nav > ul > li {
+    list-style: none;
+    margin: 10px;
+    cursor: pointer;
+    color: white;
+}
+
+nav > ul > li > a {
+    text-decoration: none;
+    color: white;
+}
+
+.menu {
+    background-color: #ed4d43;
+    width: 110px;
+    position: absolute;
+    z-index: 99;
+    left: 280px;
+    top: 70px;
+    padding: 15px;
+    border-radius: 7px;
+    
+}
+.menu::after {
+    content: '';
+    position: absolute;
+    top: -22px;
+    left: 0.9px;
+    border-top: 10px transparent solid;
+    border-left: 10px transparent solid;
+    border-right: 10px transparent solid;
+    border-bottom: 15px green solid;
+}
+
+.menu li {
+    list-style: none;
+    padding: 15px;
+    font-size: 20px;
+    color: white;
+    font-weight: bold;
+}
+
+footer {
+    background-color: #031625;
+    height: 400px;
+    padding: 30px;
+}
+
+.footer {
+    width: var(--mainWidth);
+    position: relative;
+    left: 50%;
+    transform: translateX(-50%);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+
+}
+
+.footer:first-child {
+    /* background-color: red; */
+}
+
+.footer:first-child img {
+    width: 350px;
+
+}
+
+.footer .first {
+    margin: 30px;
+}
+
+.footer .first a {
+    font-weight: bold;
+    color: #e5dc91;
+    text-decoration: none;
+    text-shadow: 0px 0px 15px #e5dc91;
+    font-size: 20px;
+    animation-name: change-color;
+    animation-duration: 4s;
+    animation-iteration-count: infinite;
+}
+
+@keyframes change-color {
+    0% {
+        color: #e5dc91;
+        text-shadow: 0px 0px 15px #e5dc91;
+    }
+    25% {
+        color: #0fa7ea;
+        text-shadow: 0px 0px 15px #0fa7ea;
+    }
+    50% {
+        color: #d463d4;
+        text-shadow: 0px 0px 15px #d463d4;
+    }
+    100% {
+        color: #e5dc91;
+        text-shadow: 0px 0px 15px #e5dc91;
+    }
+}
+
+
+.footer .second {
+    display: flex;
+    flex-direction: row;
+}
+
+.footer .second div {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-left: 20px;
+    margin-right: 20px;
+}
+
+.footer .second div p {
+    color: #0fa7ea;
+    font-weight: bold;
+
+}
+
+.locationIcon ,
+.phoneIcon ,
+.emailIcon{
+    width: 30px;
+    margin: 20px;
+    color: var(--purple);
+    text-shadow: 0px 0px 15px #e5dc91;
+}
+
+.footer .third {
+    display: flex;
+}
+
+.footer .third > svg {
+    height: 50px;
+    margin: 20px;
+}
+
+.footer .third .facebook {
+    color: #3f62a9;
+}
+
+.footer .third .twitter {
+    color: #1c99e6;
+}
+
+.footer .third .instagram {
+    color: #ed4d43;
+}
+
+.copyWrite {
+    color: gray;
+    font-size: 15px;
+    margin: 20px;
+}
+
+
