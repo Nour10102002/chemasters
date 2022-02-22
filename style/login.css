@@ -1,16 +1,249 @@
-body {
-    background-image: url("../nour_photo/background-page.png");
+* {
+    margin: 0;
+    padding: 0;
 }
 
-.login {
-    background-color: white;
-    width: 500px;
-    height: 800px;
+:root {
+    --mainWidth: 1000px;
+    --darkBlue: #031625;
+    --purple: #d463d4;
+    --blue: #00c3ff;
+    --pink: #ee4ae0;
+    --green-blue: #06dfc2;
+}
+
+body {
+    background-image: url("../nour_photo/background-page.png");
+    background-size: cover;
+    font-family: sans-serif;
+
+}
+
+.container {
     position: absolute;
     top: 50%;
     left: 50%;
     transform: translate(-50%,-50%);
-    padding: 30px;
+}
+
+.square {
+    position: absolute;
+    backdrop-filter: blur(10px);
+    box-shadow: 0 25px 45px rgba(0, 0, 0, 0.1);
+    border: 1px solid rgba(255, 255, 255, 0.5);
+    border-right: 1px solid rgba(255, 255, 255, 0.2);
+    border-bottom: 1px solid rgba(255, 255, 255, 0.2);
+    border-radius: 10px;
+    animation: animate 10s linear infinite;
+}
+
+@keyframes animate {
+    0% {
+        transform: translateY(-10px);
+    }
+    50% {
+        transform: translateY(10px);
+    }
+    100% {
+        transform: translateY(-10px);
+    }
+}
+
+.square:nth-child(1) {
+    top: -50px;
+    right: -60px;
+    width: 100px;
+    height: 100px;
+}
+
+.square:nth-child(2) {
+    top: 150px;
+    left: -100px;
+    width: 120px;
+    height: 120px;
+    z-index: 2;
+    animation-delay: 1s;
+}
+
+.square:nth-child(3) {
+    bottom: 50px;
+    right: -60px;
+    width: 80px;
+    height: 80px;
+    z-index: 2;
+    animation-delay: 2s;
+}
+
+.square:nth-child(4) {
+    bottom: -70px;
+    left: 70px;
+    width: 50px;
+    height: 50px;
+    animation-delay: 3s;
+}
+
+.square:nth-child(5) {
+    top: -80px;
+    left: 130px;
+    width: 60px;
+    height: 60px;
+    animation-delay: 4s;
+}
+
+form {
+    padding-top: 20px;
+    display: flex;
+    justify-content: center;
+    backdrop-filter: blur(10px);
+    border: 1px solid rgba(255, 255, 255, 0.5);
+    border-right: 1px solid rgba(255, 255, 255, 0.2);
+    border-bottom: 1px solid rgba(255, 255, 255, 0.2);
+    width: 350px;
+    height: 500px;
+    position: relative;
+    overflow: hidden;
+    border-radius: 30px;
+    box-shadow: 6px 4px 20px 0px #00c3ff78, -14px 14px 20px #d463d47d , 0 0 15px #06dfc2;
+}
+.inputs {
+    position: absolute;
     display: flex;
     flex-direction: column;
+}
+
+#email {
+    background-color: transparent;
+    border: 2px solid var(--purple);
+}
+
+#password, #c_password {
+    background-color: transparent;
+    border: 2px solid var(--blue);
+}
+
+span {
+    position: absolute;
+    transform: translate(-20px,20px);
+    cursor: pointer;
+}
+
+input[type="password"]:not(:placeholder-shown) + span {
+    display: inline;
+}
+
+input[type="password"]:placeholder-shown + span {
+    display: none;
+}
+
+.bi-eye {
+    position: absolute;
+}
+
+.bi-eye-slash {
+    position: relative;
+    display: none;
+}
+
+.password p {
+    color: tomato;
+    text-align: center;
+    font-size: 13px;
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 100%;
+    display: none;
+}
+
+#username {
+    background-color: transparent;
+    border: 2px solid var(--green-blue);
+}
+
+input {
+    color: white;
+}
+
+input:focus {
+    outline: none;
+}
+
+.border-padding {
+    border-radius: 20px;
+    padding: 8px;
+    margin-top: 20px;
+}
+
+.bi {
+    transform: translate(-10px,7px);
+}
+
+.inputs button {
+    margin-top: 20px;
+    padding: 8px;
+    border: none;
+    z-index: 10;
+    background-image: linear-gradient(40deg,var(--purple),var(--blue),var(--green-blue));
+    border-radius: 20px;
+    color: white;
+    font-weight: bold;
+    font-size: 18px;
+    cursor: pointer;
+}
+
+button:active {
+    transform: scale(0.97);
+}
+
+.inputs a {
+    color: gray;
+    font-size: 12px;
+    margin-top: 10px;
+    text-align: center;
+}
+
+
+form img {
+    position: absolute;
+    width: 280%;
+    bottom: -2%;
+    left: 0;
+}
+
+form .image {
+    width: 180%;
+}
+
+.message {
+    background-image: linear-gradient(40deg,var(--purple),var(--blue),var(--green-blue));
+    position: absolute;
+    z-index: 9;
+    width: 400px;
+    height: 200px;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    border-radius: 20px;
+    display: none;
+}
+
+.message > p {
+    color: white;
+    font-size: 30px;
+    width: 100%;
+    position: absolute;
+    text-align: center;
+    font-weight: bold;
+}
+
+
+.message > .bi-x {
+    position: relative;
+    transform: translate(350px,-10px);
+    cursor: pointer;
 }

@@ -8,15 +8,27 @@
     --purple: #d463d4;
 }
 
+body {
+    font-family: sans-serif;
+    background-image: url("../nour_photo/background-page.png");
+    background-size: contain;
+    position: relative;
+}
+
 .container {
-    /* background-color: hotpink; */
     width: var(--mainWidth);
-    /* height: 50vh; */
     position: relative;
     left: 50%;
     transform: translateX(-50%);
     z-index: 1;
     overflow: hidden;
+}
+
+.container > h1 {
+    color: white;
+    font-size: 100px;
+    margin-top: 100px;
+    text-align: center;
 }
 
 nav {
@@ -35,26 +47,68 @@ nav {
 
 nav > ul {
     width: var(--mainWidth);
-    position: relative;
-    top: 30%;
-    left: 50%;
-    transform: translate(-50%,-50%);
     display: flex;
     font-size: 20px;
 }
 
 nav > ul > li {
     list-style: none;
-    margin: 10px;
+    margin: 10px 40px;
     cursor: pointer;
     color: white;
+    font-weight: bold;
+    transition: 0.5s;
 }
+
+nav > ul > li:hover {
+    background-color: var(--purple);
+    padding: 10px 20px;
+    border-radius: 20px;
+}
+
 
 nav > ul > li > a {
     text-decoration: none;
     color: white;
+    font-weight: bold;
 }
 
+.menu {
+    position: absolute;
+    background-color: var(--darkBlue);
+    border-radius: 10px;
+    display: none;
+    margin-top: 20px;
+}
+
+.menu ul li {
+    list-style: none;
+    padding: 20px 80px;
+    border-radius: 0 30px;
+    transition: 0.5s;
+}
+
+.menu ul li:hover {
+    background-color: var(--purple);
+}
+
+
+.menu ul li a {
+    text-decoration: none;
+    color: white;
+    font-weight: bold;
+}
+
+.logout {
+    margin-right: 50px;
+    padding: 10px 20px;
+    background-image: linear-gradient(40deg,var(--purple),var(--blue),var(--green-blue));
+    border-radius: 20px;
+    color: white;
+    font-weight: bold;
+    font-size: 18px;
+    text-decoration: none;
+}
 
 footer {
     background-color: #031625;
@@ -68,109 +122,97 @@ footer {
     left: 50%;
     transform: translateX(-50%);
     display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-
+    justify-content: space-between;
 }
 
-.footer:first-child {
-    /* background-color: red; */
+footer > * {
+    color: white;
 }
 
-.footer:first-child img {
-    width: 350px;
-
+.con1 , .col2 , .col3 {
+    width: 300px;
 }
 
-.footer .first {
-    margin: 30px;
+.footer h1 , .footer h2 {
+margin-bottom: 30px;
 }
 
-.footer .first a {
-    font-weight: bold;
-    color: #e5dc91;
-    text-decoration: none;
-    text-shadow: 0px 0px 15px #e5dc91;
+.col1 p:nth-of-type(2),
+.col1 p:nth-of-type(4) {
+    margin-bottom: 35px;
+}
+
+
+.col1 h1 {
+    font-size: 40px;
+    background: linear-gradient(40deg,var(--purple),var(--blue),var(--green-blue));
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
+.col1 p {
     font-size: 20px;
-    animation-name: change-color;
-    animation-duration: 4s;
-    animation-iteration-count: infinite;
-}
+} 
 
-@keyframes change-color {
-    0% {
-        color: #e5dc91;
-        text-shadow: 0px 0px 15px #e5dc91;
-    }
-    25% {
-        color: #0fa7ea;
-        text-shadow: 0px 0px 15px #0fa7ea;
-    }
-    50% {
-        color: #d463d4;
-        text-shadow: 0px 0px 15px #d463d4;
-    }
-    100% {
-        color: #e5dc91;
-        text-shadow: 0px 0px 15px #e5dc91;
-    }
-}
-
-
-.footer .second {
-    display: flex;
-    flex-direction: row;
-}
-
-.footer .second div {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    margin-left: 20px;
-    margin-right: 20px;
-}
-
-.footer .second div p {
-    color: #0fa7ea;
+.col1 p > span {
     font-weight: bold;
-
 }
 
-.locationIcon ,
-.phoneIcon ,
-.emailIcon{
-    width: 30px;
-    margin: 20px;
+.col2 h2,
+.col3 h2 {
+    font-size: 25px;
+    margin-top: 30px;
     color: var(--purple);
-    text-shadow: 0px 0px 15px #e5dc91;
 }
 
-.footer .third {
+.col2 a {
+    font-size: 20px;
+    margin: 8px;
+    color: white;
+    text-decoration: none;
+}
+
+.col2 {
     display: flex;
+    flex-direction: column;
 }
 
-.footer .third > svg {
-    height: 50px;
-    margin: 20px;
-}
-
-.footer .third .facebook {
-    color: #3f62a9;
-}
-
-.footer .third .twitter {
-    color: #1c99e6;
-}
-
-.footer .third .instagram {
-    color: #ed4d43;
+.col3 p{
+    font-size: 18px;
 }
 
 .copyWrite {
+    margin: 20px 0;
+    font-size: 12px;
     color: gray;
-    font-size: 15px;
-    margin: 20px;
 }
 
+.icons > * {
+    margin-right: 15px;
+}
+
+.clock {
+    position: relative;
+}
+
+.clock .colckContainer{
+    background-color: white;
+    padding: 10px;
+    border-radius: 20px;
+}
+
+.color{
+    color: gray;
+    font-weight: bold;
+}
+
+.clock p {
+    position: absolute;
+    top: 0;
+    right: 0;
+    padding: 9px 30px;
+    background-image: linear-gradient(40deg,var(--purple),var(--blue),var(--green-blue));;
+    border-radius: 20px;
+    
+}
 

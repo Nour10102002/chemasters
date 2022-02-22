@@ -1,0 +1,113 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+
+:root {
+    --mainWidth: 1000px;
+    --darkBlue: #031625;
+    --purple: #d463d4;
+    --blue: #00c3ff;
+    --pink: #ee4ae0;
+    --green-blue: #06dfc2;
+}
+
+body {
+    font-family: sans-serif;
+    background-image: url("../nour_photo/background-page.png");
+    background-size: contain;
+}
+
+.container {
+    height: 100vh;
+    position: relative;
+}
+
+.choosen {
+    background-color: var(--purple);
+    padding: 10px 20px;
+    border-radius: 20px;
+}
+
+form {
+    /* background-color: #031625; */
+    backdrop-filter: blur(10px);
+    position: absolute;
+    top: 20%;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 600px;
+    height: 500px;
+    position: relative;
+    overflow: hidden;
+    border-radius: 30px;
+    box-shadow: 6px 4px 20px 0px #00c3ff78, -14px 14px 20px #d463d47d , 0 0 15px #06dfc2;
+}
+.inputs {
+    position: absolute;
+    display: flex;
+    flex-direction: column;
+    right: 0;
+    top: 0;
+    padding: 0 40px;
+}
+
+input:first-of-type {
+    background-color: transparent;
+    border: 2px solid var(--purple);
+}
+
+input:nth-of-type(2) {
+    background-color: transparent;
+    border: 2px solid var(--blue);
+}
+
+input:nth-of-type(3) {
+    background-color: transparent;
+    border: 2px solid var(--green-blue);
+}
+
+input {
+    color: white;
+}
+
+textarea {
+    background-color: transparent;
+    border: 2px solid #7060d9;
+    margin-top: 20px;
+    color: white;
+    z-index: 9;
+}
+
+input:focus , textarea:focus{
+    outline: none;
+}
+
+.border-padding {
+    border-radius: 20px;
+    padding: 8px;
+    margin-top: 20px;
+}
+
+.inputs button {
+    margin-top: 20px;
+    padding: 8px;
+    border: none;
+    z-index: 10;
+    background-image: linear-gradient(40deg,var(--purple),var(--blue),var(--green-blue));
+    border-radius: 20px;
+    color: white;
+    font-weight: bold;
+    font-size: 18px;
+    cursor: pointer;
+}
+
+button:active {
+    transform: scale(0.97);
+}
+
+form img {
+    position: absolute;
+    width: 160%;
+    bottom: -2%;
+}

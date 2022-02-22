@@ -15,20 +15,22 @@
     <div class="nav">
         <nav>
             <ul>
-                <li onclick="displayMenu()">Menu</li>
-                <li><a href="#">Home</a></li>
-                <li><a href="#">Contact Us</a></li>
-                <li><a href="#">About Us</a></li>
+                <li onclick="displayMenu()">Menu
+                    <div class="menu">
+                        <ul class="dropdown">
+                            <li><a href="s_block.html">S-Block</a></li>
+                            <li><a href="F_block.html">F-Block</a></li>
+                            <li><a href="d_block.html">D-Block</a></li>
+                            <li><a href="p_block.html">P-Block</a></li>
+                        </ul>
+                    </div> 
+                </li>
+                <li class="choosen"><a href="home.html">Home</a></li>
+                <li><a href="contactUs.html">Contact Us</a></li>
+                <li><a href="aboutUs.html">About Us</a></li>
             </ul>
+            <a href="index.html" class="logout">Logout</a>
         </nav>
-        <!-- <div class="menu">
-            <ul>
-                <li>S-Block</li>
-                <li>F-Block</li>
-                <li>D-Block</li>
-                <li>P-Block</li>
-            </ul>
-        </div>  -->
     </div>
 
     <!-- ------------------------------------------------------------------------------------------- -->
@@ -948,6 +950,7 @@
             <div class="copyWrite">Copyright © 2022 <strong>cheMasters</strong> All rights reserved</div> -->
         </div>
     </footer>
+    <script src="main.js"></script>
 </body>
 
 </html>

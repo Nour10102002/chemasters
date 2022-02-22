@@ -1,0 +1,29 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+
+:root {
+    --mainWidth: 1000px;
+    --darkBlue: #031625;
+    --purple: #d463d4;
+    --blue: #00c3ff;
+    --pink: #ee4ae0;
+    --green-blue: #06dfc2;
+}
+
+body {
+    font-family: sans-serif;
+    background-image: url("../nour_photo/background-page.png");
+    background-size: contain;
+}
+
+.choosen {
+    background-color: var(--purple);
+    padding: 10px 20px;
+    border-radius: 20px;
+}
+
+.container {
+    
+}
