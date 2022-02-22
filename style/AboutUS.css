@@ -24,6 +24,70 @@ body {
     border-radius: 20px;
 }
 
-.container {
-    
+
+.msp  {
+    display: flex;
+    flex-direction: row-reverse;
+    justify-content: space-between;
 }
+
+.msp img {
+    /* margin-top: 150px; */
+    margin-right: 20px;
+    width: 430px;
+    height: 430px;
+    border-radius: 50%;
+    box-shadow: 6px 4px 20px 0px #00c3ff78, -14px 14px 20px #d463d47d , 0 0 15px #06dfc2;
+    animation-name: spin;
+    animation-duration: 30s;
+    animation-timing-function: linear;
+    animation-iteration-count: infinite;
+    transform: rotate(1turn);
+}
+
+@keyframes spin {
+    from {
+        transform: rotate(0deg);
+    }
+    to {
+        transform: rotate(1turn);
+    }
+}
+
+.msp p {
+    color: white;
+    /* margin-top: 200px; */
+    margin-left: 20px;
+    width: 400px;
+    font-size: 30px;
+    font-weight: bold;
+    backdrop-filter: blur(10px);
+    box-shadow: 0 25px 45px rgba(0, 0, 0, 0.1);
+    border: 1px solid rgba(255, 255, 255, 0.5);
+    border-right: 1px solid rgba(255, 255, 255, 0.2);
+    border-bottom: 1px solid rgba(255, 255, 255, 0.2);
+    border-radius: 10px;padding: 30px;
+}
+
+.container > span {
+    margin-top: 60px;
+    font-size: 300px;
+    color: white;
+    font-weight: bold;
+    display: flex;
+    justify-content: center;
+}
+
+.m {
+    color: #7fba00;
+}
+
+.s {
+    color: #f25123;
+}
+
+.p {
+    color: #02a3f1;
+}
+
+

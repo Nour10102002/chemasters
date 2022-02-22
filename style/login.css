@@ -34,18 +34,18 @@ body {
     border-right: 1px solid rgba(255, 255, 255, 0.2);
     border-bottom: 1px solid rgba(255, 255, 255, 0.2);
     border-radius: 10px;
-    animation: animate 10s linear infinite;
+    animation: animate 8s linear infinite;
 }
 
 @keyframes animate {
     0% {
-        transform: translateY(-10px);
+        transform: translateY(-20px);
     }
     50% {
-        transform: translateY(10px);
+        transform: translateY(20px);
     }
     100% {
-        transform: translateY(-10px);
+        transform: translateY(-20px);
     }
 }
 

@@ -60,6 +60,16 @@ function matching() {
     }
 }
 
+function login() {
+    let email = document.getElementById("email").value;
+    let password = document.getElementById("password").value;
+
+    if(email != "" && password != "")
+    {
+        window.open('home.html');
+    }
+}
+
 function displayTime() {
     var dateTime = new Date();
     var hours = dateTime.getHours();

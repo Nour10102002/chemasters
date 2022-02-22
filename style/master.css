@@ -212,3 +212,14 @@ img {
     width: 200px;
 }
 
+.logo {
+    font-size: 40px;
+    background: linear-gradient(40deg,var(--purple),var(--blue),var(--green-blue));
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    position: relative;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+    z-index: 999999;
+}
