@@ -25,8 +25,7 @@ body {
 }
 
 .container{
-    height: fit-content;
-    margin-bottom: 20px;
+    height: 100vh;
 }
 
 .msp  {
