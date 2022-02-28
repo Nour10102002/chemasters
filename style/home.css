@@ -65,7 +65,7 @@ body {
     grid-template-columns: repeat(19,auto);
     gap: 5px;
     margin-top: 100px;
-    margin-bottom: 200px;
+    margin-bottom: 115px;
 }
 
 .container-one > div {

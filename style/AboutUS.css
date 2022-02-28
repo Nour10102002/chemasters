@@ -24,6 +24,11 @@ body {
     border-radius: 20px;
 }
 
+.container{
+    height: 135vh;
+    margin-bottom: 20px;
+}
+
 
 .msp  {
     display: flex;
